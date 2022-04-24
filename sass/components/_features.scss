@@ -1,0 +1,40 @@
+/*особенности*/
+.features__list {
+  display: flex;
+}
+
+.features__item {
+  width: 270px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.features__title {
+  @include font-style(14px, 700, 1.14, uppercase, 0.03em);
+}
+
+.features__text {
+  @include font-style(14px, 400, 1.71, none, 0.03em);
+  color: var(--basic-text-color);
+
+  margin-bottom: 30px;
+}
+
+.features__pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 270px;
+  height: 120px;
+  background-color: var(--basic-bg-color);
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+
+.features__icon {
+  width: 70px;
+  height: 70px;
+}

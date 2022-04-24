@@ -1,0 +1,54 @@
+/* ссылки на соцсети */
+
+.card-content .social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teamlink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: background-color var(--cubic);
+
+  &:hover,
+  &:focus {
+    background-color: var(--main-blue-color);
+  }
+}
+
+.teamlink-icon {
+  fill: var(--icons-grey-color);
+  width: 20px;
+  height: 20px;
+
+  transition: fill var(--cubic);
+}
+
+.teamlink:hover .teamlink-icon,
+.teamlink:focus .teamlink-icon {
+  fill: var(--main-white-color);
+}
+
+.footer__link:hover,
+.footer__link:focus {
+  background-color: var(--main-blue-color);
+}
+
+.social-it:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social {
+  display: flex;
+  background-color: var(--main-white-color);
+  margin-top: 16px;
+
+  justify-content: center;
+  align-items: center;
+}

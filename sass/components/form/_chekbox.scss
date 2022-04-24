@@ -1,0 +1,39 @@
+.modal__label.chek {
+  display: flex;
+  justify-content: center;
+}
+
+.chekbox {
+  /* более современная версия, но универсальная будет применена ниже
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute; */
+
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.chekbox:checked + .modal__icon {
+  background-color: var(--main-blue-color);
+  /* background-image: url("../images/icons.svg#icon-check"); */
+  background-image: url("../images/check.svg");
+  background-size: contain;
+  background-origin: border-box;
+  border-color: var(--main-blue-color);
+}
+
+/* .modal-label.chek:hover .chekbox,
+.modal-label.chek:focus .chekbox {
+  border: 1px solid var(--main-blue-color);
+  border-radius: 2px;
+  /* transition: outline var(--cubic); 
+} */

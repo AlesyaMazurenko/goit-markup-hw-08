@@ -1,0 +1,46 @@
+@import "./reset";
+
+/*разметка шапки сайта*/
+body {
+  @include font-style(14px, 400, 1.14, none, 0.03em);
+  background-color: var(--main-white-color);
+  color: var(--accent-text-color);
+  font-family: $mainFont;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+::after {
+  box-sizing: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.section {
+  padding: 94px 0;
+}
+
+/* Заголовки секций */
+.section__title {
+  @include font-style(36px, 700, 1.17, none, 0.03em);
+  text-align: center;
+}
+
+.section__title.works,
+.section__title.team,
+.section__title.clients {
+  margin-bottom: 50px;
+}
+
+.features__title,
+.title-team {
+  margin-top: 0;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,84 @@
+/*портфолио-список работ*/
+.portfolio-img {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
+  margin-bottom: -30px;
+}
+
+.portfolio-img > .items {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.portfolio-item {
+  text-decoration: none;
+  box-shadow: none;
+  transition: box-shadow var(--cubic);
+
+  display: block;
+  flex-basis: calc((100% - 60px) / 3);
+
+  &:hover,
+  &:focus {
+    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+      0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* OVERLAY */
+.portfolio-tumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-card {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform var(--cubic);
+}
+
+.portfolio-item:hover .overlay-card {
+  transform: translateY(0);
+}
+
+.portf-content {
+  @include font-style(18px, 400, 1.55, none, 0.03em);
+  display: block;
+
+  color: var(--main-white-color);
+
+  text-align: center;
+  justify-content: center;
+  padding-top: 63px;
+  padding-left: 24px;
+}
+
+.portfolio-title {
+  @include font-style(18px, 700, 2, none, 0.06em);
+
+  display: inline-block;
+  margin-bottom: 4px;
+  font-style: normal;
+
+  color: var(--accent-text-color);
+}
+
+.portfolio-text {
+  @include font-style(16px, 400, 1.87, none, 0.03em);
+
+  color: var(--basic-text-color);
+}
+
+.potfolio-decor {
+  border: 1px solid #eeeeee;
+  border-top: 0;
+  padding: 20px 24px;
+}
