@@ -8,6 +8,10 @@ body {
   font-family: $mainFont;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -24,19 +28,32 @@ img {
 }
 
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
+
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
 }
 
 /* Заголовки секций */
 .section__title {
-  @include font-style(36px, 700, 1.17, none, 0.03em);
+  @include font-style(28px, 700, 1.14, none, 0.03em);
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    @include font-style(36px, 700, 1.17, none, 0.03em);
+    text-align: center;
+  }
 }
 
 .section__title.works,
 .section__title.team,
 .section__title.clients {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 
 .features__title,

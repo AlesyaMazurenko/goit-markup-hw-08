@@ -2,20 +2,27 @@
 .hero {
   background-color: var(--accent-bg-color);
   text-align: center;
-
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .section .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 /* Фоновое изображение Героя */
 .hero__overlay {
   max-width: 1600px;
-  height: 600px;
+  min-height: 400px;
   margin-left: auto;
   margin-right: auto;
 
@@ -34,15 +41,15 @@
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 700px;
-  text-align: center;
-  justify-content: center;
-
+  max-width: 360px;
   color: var(--main-white-color);
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
 
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  @include font-style(26px, 900, 1.61, uppercase, 0.06em);
+
+  // text-align: center;
+  // justify-content: center;
+  @media screen and (min-width: 1200px) {
+    @include font-style(44px, 900, 1.36, uppercase, 0.06em);
+    max-width: 700px;
+  }
 }

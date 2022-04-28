@@ -1,6 +1,22 @@
 .header__container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+
+  padding-top: 10px;
+  // padding-bottom: 10px;
+
+  // @media screen and (max-widht: 420px) {
+  //   width: 100%;
+
+  @media screen and (max-width: 767px) {
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 /* нижняя линия Хедер */
@@ -11,40 +27,50 @@
 /*Логотип*/
 
 .logo {
-  margin-right: 93px;
-
   color: var(--main-blue-color);
-  font-family: $secondaryFont;
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 1.19;
+  font-family: Raleway;
+  @include font-style(24px, 700, 1.17, none, 0.03em);
+
   text-decoration: none;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .logo--main {
   color: var(--accent-text-color);
+  font-family: Raleway;
 }
-// .logo--main {
-//   color: var(--accent-text-color);
-// }
 
-/*Навигация*/
+.nav {
+  display: none;
+  margin-left: 88px;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-left: 88px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+    margin-left: 93px;
+  }
+}
+
 .nav__list {
   display: flex;
 }
 
-.nav__item {
+.nav__item:not(:last-child) {
   margin-right: 50px;
-
-  &:last-child {
-    margin-right: 0px;
-  }
 }
 
 .nav__link {
   display: block;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 
   color: var(--accent-text-color);
   font-weight: 500;
@@ -79,22 +105,69 @@
 }
 
 /*Контакты*/
+
 .contact {
-  display: flex;
+  display: none;
   margin-left: auto;
+
+  @media screen and (max-widht: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 84px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: auto;
+  }
 }
 
-.contact__item:not(:last-child) {
-  margin-right: 30px;
+.contact__item {
+  display: flex;
+  margin-bottom: 0px;
+  margin-right: 0;
 }
+
+@media screen and (min-width: 768px) {
+  .contact__item:nth-child(1) {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact__item:not(:last-child) {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+}
+
+// @media screen and (min-width: 768px) {
+//   .contact__item:not(:last-child) {
+//     margin-bottom: 10px;
+//   }
+// }
+
+// @media screen and (min-width: 1200px) {
+//   .contact__item:not(:last-child) {
+//     margin-right: 30px;
+//     margin-bottom: 0;
+//   }
+// }
+
 .contact__link {
   display: flex;
   align-items: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  // padding-top: 30px;
+  // padding-bottom: 30px;
 
   color: var(--basic-text-color);
+  font-size: 12px;
   font-weight: 500;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   text-decoration: none;
 
@@ -104,23 +177,65 @@
   &:focus {
     color: var(--main-blue-color);
   }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+  }
 }
 
 .contact__list {
   display: flex;
+  flex-wrap: wrap;
+}
 
-  &:not(:last-child) {
-    margin-left: 50px;
+@media screen and (max-width: 1199px) {
+  .contact__item:not(:last-child) {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact__item {
+    margin-bottom: 0;
+    margin-right: 0;
   }
 }
 
-.contact__icon {
-  width: 16px;
-  height: 12px;
-
-  fill: currentColor;
-  margin-right: 10px;
+@media screen and (min-width: 1200px) {
+  .contact__list {
+    flex-wrap: nowrap;
+    margin-bottom: 0;
+  }
 }
-// .contact .list {
-//   display: flex;
-// }
+
+@media screen and (min-width: 1200px) {
+  .contact__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.contact__icon--mail {
+  fill: currentColor;
+  width: 14px;
+  height: 10px;
+  margin-right: 8px;
+
+  @media screen and (min-width: 1200px) {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+  }
+}
+
+.contact__icon-tel {
+  fill: currentColor;
+  width: 14px;
+  height: 10px;
+  margin-right: 8px;
+
+  @media screen and (min-width: 1200px) {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+  }
+}
