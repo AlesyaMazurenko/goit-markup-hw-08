@@ -12,6 +12,8 @@
   pointer-events: initial;
   transform: scale(1);
 
+  overflow: hidden;
+
   transition: opacity var(--cubic), transform var(--cubic);
 }
 
@@ -31,8 +33,8 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
 
-  width: 528px;
-  height: 581px;
+  width: 100vw;
+  // height: 581px;
   border: 1px;
   border-radius: 4px;
   border-color: rgba(0, 0, 0, 0.1);
@@ -40,6 +42,14 @@
   background-color: var(--main-white-color);
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+  }
 }
 
 .modal-close__btn {
@@ -83,12 +93,16 @@
 }
 
 .modal__title {
-  @include font-style(20px, 700, 1.15, none, 0.03em);
+  @include font-style(20px, 700, 1.5, none, 0.03em);
 
   text-align: center;
 
   display: block;
   margin-bottom: 12px;
+
+  @media screen and (min-width: 1200px) {
+    line-height: 1.15;
+  }
 }
 
 .modal__label {
@@ -101,8 +115,9 @@
 }
 
 .modal__label.chek {
-  display: flex;
-  align-items: center;
+  display: block;
+  // align-items: center;
+  text-align: center;
 
   margin-top: 20px;
 }
@@ -188,5 +203,5 @@
 
 .modal__form .button {
   display: flex;
-  margin: 30px auto 40px;
+  margin: 30px auto 0;
 }
