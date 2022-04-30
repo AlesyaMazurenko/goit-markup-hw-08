@@ -5,6 +5,10 @@
   background-color: var(--accent-bg-color);
   color: var(--main-white-color);
   padding: 60px 0px;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
 
 // @media screen and (min-width: 1200px) {
@@ -18,10 +22,20 @@
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .footer-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+}
 .footer__address {
   display: inline-block;
   flex-direction: column;
   margin-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
 }
 
 .footer__address > .logo {
@@ -36,7 +50,7 @@
 @media screen and (max-width: 1199px) {
   .footer__container {
     text-align: center;
-    margin-bottom: 60px;
+    // margin-bottom: 60px;
   }
 }
 

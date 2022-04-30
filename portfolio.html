@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewpoirt" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,6 +22,14 @@
   <header class="header">
     <div class="container header__container">
       <a href="./index.html" class="logo">Web<span class="logo--main">Studio</span></a>
+             <button type="button" class="menu-btn" aria-controls="menu-container" aria-label="Переключатель мобильного меню"
+                  data-menu-button aria-expanded="false">
+                  <svg class="icon menu-btn__icon" widht="40px" height="40px">
+                    <use class="menu-btn__icon-close" href="./images/icons.svg#icon-close_40px"></use>
+                    <use class="menu-btn__icon-open" href="./images/icons.svg#icon-menu_40px"></use>
+                  </svg>
+                </button>
+
       <nav class="nav">
         <ul class="list nav__list">
           <li class="nav__item">
@@ -38,14 +46,14 @@
         <ul class="list contact__list">
           <li class="contact__item">
             <a href="mailto:info@devstudio.com" class="contact__link">
-              <svg class="contact__icon">
+              <svg class="contact__icon--mail">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com</a>
           </li>
           <li class="contact__item">
             <a href="tel:+380961111111" class="contact__link">
-              <svg class="contact__icon">
+              <svg class="contact__icon-tel">
                 <use href="./images/icons.svg#icon-tel"></use>
               </svg>
               +38 096 111 11 11</a>
@@ -347,7 +355,7 @@
           <h3 class="footer__title">Подпишитесь на рассылку</h3>
     
           <div class="subscribe-wrapper">
-            <form class="subsctibe__input">
+            <form class="subscribe__input">
               <!-- <label for="subscr-email" class="sub-input"> -->
               <input name="email" type="email" id="subscr-email" placeholder="E-mail" class="subscribe__mail">
               <!-- </label> -->
@@ -373,11 +381,11 @@
         <nav class="mobile-nav">
           <ul class="mobile-nav__list list">
             <li class="mobile-nav__item">
-              <a class="mobile-nav__link--current link" href="./index.html">
+              <a class="mobile-nav__link link" href="./index.html">
                 Студия</a>
             </li>
             <li class="mobile-nav__item">
-              <a class="mobile-nav__link link" href="./portfolio.html">
+              <a class="mobile-nav__link--current link" href="./portfolio.html">
                 Портфолио</a>
             </li>
             <li class="mobile-nav__item">
