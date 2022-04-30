@@ -89,7 +89,7 @@
   color: var(--basic-text-color);
 }
 
-.mobile-socials {
+.mobile-socials__list {
   display: flex;
   flex-wrap: wrap;
   @media screen and (max-width: 479px) {
@@ -120,9 +120,13 @@
 
 .mobile-socials__link {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 12px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--main-blue-color);
+
+  @media screen and (min-width: 468px) {
+    font-size: 18px;
+  }
 }
