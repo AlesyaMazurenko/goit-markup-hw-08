@@ -1,14 +1,34 @@
 /*портфолио-список работ*/
 .portfolio-img {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -30px;
   margin-bottom: -30px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+    margin-bottom: -30px;
+  }
 }
 
 .portfolio-img > .items {
   margin-right: 30px;
   margin-bottom: 30px;
+
+  @media screen and (max-width: 767px) {
+    margin-right: 0;
+    &:ntn(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 60px) / 2);
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1120px) {
+    width: calc((100% - 90px) / 3);
+    margin-bottom: 30px;
+  }
 }
 
 .portfolio-item {
@@ -17,7 +37,8 @@
   transition: box-shadow var(--cubic);
 
   display: block;
-  flex-basis: calc((100% - 60px) / 3);
+  height: 100%;
+  // flex-basis: calc((100% - 60px) / 3);
 
   &:hover,
   &:focus {
@@ -50,15 +71,27 @@
 }
 
 .portf-content {
-  @include font-style(18px, 400, 1.55, none, 0.03em);
+  @include font-style(16px, 400, 1.55, none, 0.03em);
   display: block;
 
   color: var(--main-white-color);
 
   text-align: center;
   justify-content: center;
-  padding-top: 63px;
-  padding-left: 24px;
+  padding: 40px 20px;
+  @media screen and (min-width: 480px) {
+    font-size: 18px;
+    padding: 77px 24px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    padding: 49px 24px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 18px;
+    padding: 63px 24px;
+  }
 }
 
 .portfolio-title {

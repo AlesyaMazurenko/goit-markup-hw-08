@@ -45,14 +45,34 @@
 
 .portfolio-lst-buttons {
   display: flex;
-  justify-content: center;
+
   align-items: flex-start;
   border: 4px;
   min-width: 130px;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1120px) {
+    margin-bottom: 50px;
+    justify-content: center;
+  }
+}
+
+.portfolio-lst-buttons > .items {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 15px;
+  }
 }
 
 .portfolio-lst-buttons > .items:not(:last-child) {
-  margin-right: 9px;
+  margin-right: 8px;
 }
