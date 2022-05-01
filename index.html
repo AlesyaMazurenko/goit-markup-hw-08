@@ -144,32 +144,33 @@
           <h2 class="section__title works">Чем мы занимаемся</h2>
           <ul class="list works__list">
             <li class="works__item">
-              <div class="works__tumb">
-              <img
-                src="./images/img1.jpg"
-                alt="Программист работает за своим рабочим столом"
+              <picture>
+                <source srcset="./images/work/work1.png, ./images/work/work1@2x.png 2x"  media="(min-width: 1200px)" type="image/png">
+                <img src="./images/work/work1.png" alt="Программист работает за своим рабочим столом"
                 width="370"
+                height="294"
               />
-              <h3 class="works__titl">Десктопные приложения </h3>
+              </picture>
+              <div class="works__overlay">
+                <h3 class="works__titl">Десктопные приложения </h3>
               </div>
             </li>
             <li class="works__item">
-              <div class="works__tumb">
-              <img
-                src="./images/img2.jpg"
-                alt="Веб-дизайнеры пользовательского интерфейса разрабатывают приложения для смартфонов"
-                width="370"
-              />
-                <h3 class="works__titl">Мобильные приложения</h3>
+              <picture>
+                <source srcset="./images/work/work2.png, ./images/work/work2@2x.png 2x" media="(min-width: 1200px)" type="image/png">
+                <img src="./images/work/work2.png" alt="Веб-дизайнеры пользовательского интерфейса разрабатывают приложения для смартфонов"
+                  width="370"  height="294"/>
+              </picture>
+              <div class="works__overlay"><h3 class="works__titl">Мобильные приложения</h3>
               </div>
             </li>
             <li class="works__item">
-             <div class="works__tumb">
-              <img
-                src="./images/img3.jpg"
-                alt="Креативный веб-дизайнер работает с графическим планшетом выбора цвета"
-                width="370"
-              />
+              <picture>
+                <source srcset="./images/work/work3.png, ./images/work/work3@2x.png 2x" media="(min-width: 1200px)" type="image/png">
+                <img src="./images/work/work3.png"
+                  alt="Креативный веб-дизайнер работает с графическим планшетом выбора цвета" width="370" height="294" />
+              </picture>
+              <div class="works__overlay">
                <h3 class="works__titl">Дизайнерские решения</h3>
               </div>
             </li>
@@ -184,13 +185,17 @@
           <ul class="list team__cont">
 
             <li class="team__list">
-              <div>
-                <img
-                  src="./images/team1.jpg"
-                  alt="Фото Игорь Демьяненко"
-                  width="270"
-                  height="260"
-                />
+             <picture>
+              <source srcset="./images/team/team1lg.jpg, 
+                              ./images/team/team1lg@2x.jpg 2x" 
+                              media="(min-width:1200px)" type="image/jpeg">
+              <source srcset="./images/team/team1md.jpg, 
+                              ./images/team/team1md@2x.jpg 2x" 
+                              media="(min-width:768px)" type="image/jpeg">
+              <source srcset="./images/team/team1sm.jpg, 
+                  ./images/team/team1sm@2x.jpg 2x" media="(max-width:767px)" type="image/jpeg">
+              <img src="./images/team/team1sm.jpg" alt="Фото Игорь Демьяненко" width="450" />
+             </picture>
                 <div class="team__content">
                   <h3 class="team__title">Игорь Демьяненко</h3>
                   <p lang="en" class="team__text">Product Designer</p>
@@ -228,19 +233,20 @@
                     </ul>
 
                 </div>
-            </div>
+            <!-- </div> -->
             </li>
 
             <li class="team__list">
-              <div>
-                <img
-                  src="./images/team2.jpg"
-                  alt="Фото Ольга Репина"
-                  width="270"
-                  height="260"
-                />
-            
-
+              
+              <picture>
+                <source srcset="./images/team/team2lg.jpg 1x, 
+                                ./images/team/team2lg@2x.jpg 2x" media="(min-width:1200px)" type="image/jpeg">
+                <source srcset="./images/team/team2md.jpg 1x, 
+                                ./images/team/team2md@2x.jpg 2x" media="(min-width:768px)" type="image/jpeg">
+                <source srcset="./images/team/team2sm.jpg 1x, 
+                                ./images/team/team2sm@2x.jpg 2x" media="(max-width:767px)" type="image/jpeg">
+                <img src="./images/team/team2sm.jpg" alt="Фото Ольга Репина" width="450" />
+              </picture>
                 <div class="team__content">
                   <h3 class="team__title">Ольга Репина</h3>
                   <p lang="en" class="team__text">Frontend Developer</p>
@@ -276,17 +282,21 @@
                       </li>
                     </ul>
                 </div>
-              </div>  
+                
             </li>
 
             <li class="team__list">
-              <div>
-                <img
-                  src="./images/team3.jpg"
-                  alt="Фото Николай Тарасов"
-                  width="270"
-                  height="260"
-                />
+              <!-- <div> -->
+                <picture>
+                  <source srcset="./images/team/team3lg.jpg, 
+                   ./images/team/team3lg@2x.jpg 2x" media="(min-width:1200px)" type="image/jpeg" />
+                  <source srcset="./images/team/team3md.jpg, 
+                  ./images/team/team3md@2x.jpg 2x" media="(min-width:768px)" type="image/jpeg" />
+                  <source srcset="./images/team/team3sm.jpg, 
+                 ./images/team/team3sm@2x.jpg 2x" media="(max-width:767px)" type="image/jpeg" />
+                  <img src="./images/team/team3sm.jpg" alt="Фото Николай Тарасов" width="450" />
+                </picture>
+
               
 
                 <div class="team__content">
@@ -324,18 +334,19 @@
                       </li>
                     </ul>
                 </div>
-              </div>  
+              <!-- </div>   -->
             </li>
 
             <li class="team__list">
-              <div>
-                <img
-                  src="./images/team4.jpg"
-                  alt="Фото Михаил Ермаков"
-                  width="270"
-                  height="260"
-                />
-              
+              <picture>
+                <source srcset="./images/team/team4lg.jpg, 
+                                ./images/team/team4lg@2x.jpg 2x" media="(min-width:1200px)" type="image/jpeg">
+                <source srcset="./images/team/team4md.jpg, 
+                                ./images/team/team4md@2x.jpg 2x" media="(min-width:768px)" type="image/jpeg">
+                <source srcset="./images/team/team4sm.jpg, 
+                                ./images/team/team4sm@2x.jpg 2x" media="(max-width:767px)" type="image/jpeg">
+                <img src="./images/team/team4sm.jpg" alt="Фото Михаил Ермаков" width="450" />
+              </picture>
 
                 <div class="team__content">
                   <h3 class="team__title">Михаил Ермаков</h3>
@@ -374,7 +385,7 @@
                   </ul>
                 </div>
 
-              </div>  
+                
             </li>
           </ul>
         </div>
