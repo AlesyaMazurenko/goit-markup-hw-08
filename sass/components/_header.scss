@@ -186,6 +186,7 @@
 .contact__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 @media screen and (max-width: 1199px) {
