@@ -1777,9 +1777,9 @@ form.subscribe__input {
   letter-spacing: 0.03em;
   display: block;
   color: var(--main-white-color);
-  text-align: center;
+  text-align: start;
   justify-content: center;
-  padding: 40px 20px;
+  padding: 15px 20px;
 }
 
 @media screen and (min-width: 480px) {
